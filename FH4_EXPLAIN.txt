@@ -1,0 +1,48 @@
+以下是每個參數的功能說明：
+
+- `s32 IsRaceOn`：當賽車正在進行時為1，當在選單或比賽停止時為0。
+- `u32 TimestampMS`：時間戳（毫秒），會隨時間累積，最終可能溢位回到0。
+- `f32 EngineMaxRpm`：引擎的最高轉速（RPM）。
+- `f32 EngineIdleRpm`：引擎的怠速轉速（RPM）。
+- `f32 CurrentEngineRpm`：引擎當前的轉速（RPM）。
+- `f32 AccelerationX, Y, Z`：車輛本地空間中的加速度，其中X表示向右加速度，Y表示向上加速度，Z表示向前加速度。
+- `f32 VelocityX, Y, Z`：車輛本地空間中的速度分量，方向與加速度相同。
+- `f32 AngularVelocityX, Y, Z`：車輛本地空間中的角速度，X表示俯仰，Y表示偏航，Z表示滾轉。
+- `f32 Yaw, Pitch, Roll`：車輛的當前偏航角、俯仰角和滾轉角。
+- `f32 NormalizedSuspensionTravel*`：懸掛行程的標準化數值，0.0f為最大伸展，1.0為最大壓縮。
+- `f32 TireSlipRatio*`：輪胎的標準化滑動比例，0表示完全抓地，絕對值超過1.0表示失去抓地力。
+- `f32 WheelRotationSpeed*`：輪胎的旋轉速度（以弧度每秒為單位）。
+- `s32 WheelOnRumbleStrip*`：輪胎是否在顫動條上，1表示在上面，0表示不在上面。
+- `f32 WheelInPuddleDepth*`：輪胎在水坑中的深度，從0到1，1為最深的水坑。
+- `f32 SurfaceRumble*`：非維度表面的顫動值，用於控制器的力回饋。
+- `f32 TireSlipAngle*`：輪胎的標準化滑動角度，0表示完全抓地，絕對值超過1.0表示失去抓地力。
+- `f32 TireCombinedSlip*`：輪胎的標準化組合滑移，0表示完全抓地，絕對值超過1.0表示失去抓地力。
+- `f32 SuspensionTravelMeters*`：懸掛行程的實際距離（以公尺為單位）。
+- `s32 CarOrdinal`：車輛品牌/型號的唯一ID。
+- `s32 CarClass`：車輛等級，範圍為0（D級，最低等）到7（X級，最高等）。
+- `s32 CarPerformanceIndex`：車輛性能指數，範圍為100（最慢）到999（最快）。
+- `s32 DrivetrainType`：驅動系統類型，0表示前驅（FWD），1表示後驅（RWD），2表示全輪驅動（AWD）。
+- `s32 NumCylinders`：引擎的汽缸數量。
+- `hzn HorizonPlaceholder`：未知的Forza Horizon 4資料。
+- `f32 PositionX, Y, Z`：車輛在遊戲世界中的位置座標。
+- `f32 Speed`：車輛的當前速度（以每秒公尺為單位）。
+- `f32 Power`：車輛的功率（以瓦特為單位）。
+- `f32 Torque`：車輛的扭矩（以牛頓米為單位）。
+- `f32 TireTemp*`：各個輪胎的溫度。
+- `f32 Boost`：增壓值，通常用於渦輪增壓車輛。
+- `f32 Fuel`：油量。
+- `f32 DistanceTraveled`：已行駛距離。
+- `f32 BestLap`：最佳單圈時間。
+- `f32 LastLap`：上一圈時間。
+- `f32 CurrentLap`：當前圈時間。
+- `f32 CurrentRaceTime`：當前比賽的累計時間。
+- `u16 LapNumber`：已完成的圈數。
+- `u8 RacePosition`：比賽中目前的位置。
+- `u8 Accel`：加速踏板位置（0-255範圍）。
+- `u8 Brake`：煞車踏板位置（0-255範圍）。
+- `u8 Clutch`：離合器踏板位置（0-255範圍）。
+- `u8 HandBrake`：手剎位置（0-255範圍）。
+- `u8 Gear`：當前變速檔位。
+- `s8 Steer`：方向盤位置（-128到127範圍）。
+- `s8 NormalizedDrivingLine`：標準化的駕駛線數據。
+- `s8 NormalizedAIBrakeDifference`：標準化的AI煞車差值。
